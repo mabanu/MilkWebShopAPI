@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
 
 // Register custom services for the milk products
 builder.Services.AddScoped<IMilkProductRepository, MilkProductRepository>();
@@ -35,6 +36,11 @@ if (app.Environment.IsDevelopment())
 	builder.Configuration.AddUserSecrets<Program>();
 
 }
+
+app.UseCors(cors => cors
+	.AllowAnyHeader()
+	.AllowAnyMethod()
+	.AllowAnyOrigin());
 
 app.UseHttpsRedirection();
 
