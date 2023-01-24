@@ -1,9 +1,7 @@
-﻿using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MilkWebShopAPI.Models;
 using Newtonsoft.Json;
-
 
 namespace MilkWebShopAPI.Data.ContextConfiguration;
 
@@ -13,15 +11,15 @@ public class MilkProductContextConfiguration : IEntityTypeConfiguration<MilkProd
 	{
 		builder.HasData(
 			SeedMilkProductData()
-			);
+		);
 	}
-	
+
 	public List<MilkProduct> SeedMilkProductData()
 	{
 		var milkProducts = new DataInitial();
-		using (StreamReader r = new StreamReader(@"Data/SeedData/milk.json"))
+		using (var r = new StreamReader(@"Data/SeedData/milk.json"))
 		{
-			string json = r.ReadToEnd();
+			var json = r.ReadToEnd();
 			milkProducts = JsonConvert.DeserializeObject<DataInitial>(json);
 		}
 

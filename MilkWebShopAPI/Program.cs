@@ -28,7 +28,6 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 	builder.Configuration.AddUserSecrets<Program>();
-
 }
 
 app.UseCors(cors => cors
@@ -41,7 +40,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-
 
 app.Run();
