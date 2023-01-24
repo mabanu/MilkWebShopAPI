@@ -15,12 +15,6 @@ builder.Services.AddCors();
 
 // Register custom services for the milk products
 builder.Services.AddScoped<IMilkProductRepository, MilkProductRepository>();
-builder.Services
-	.AddGraphQLServer()
-	.AddQueryType<Query>()
-	.AddProjections()
-	.AddFiltering()
-	.AddSorting();
 
 // Add App Db context options
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -48,6 +42,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGraphQL((PathString)"/graphql");
+
 
 app.Run();
