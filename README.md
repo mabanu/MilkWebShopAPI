@@ -24,9 +24,9 @@
    
    ## Description
    
-    This is a WebSite of a Milk Company to list his products, made as a concept excercise to develop a full project from BackEnd to FrontEnd and the use of some interesting tools made in 5 days.
+  This is a WebSite of a Milk Company to list his products, made as a concept excercise to develop a full project from BackEnd to FrontEnd and the use of some interesting tools made in 5 days.
     
-    For the API I connect to a MySQL database deploy in AWS and use ASP.NET framework with Entity Framework to create the API.
+  For the API I connect to a MySQL database deploy in AWS and use ASP.NET framework with Entity Framework to create the API.
     
      ## Look
    
