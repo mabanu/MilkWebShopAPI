@@ -28,7 +28,7 @@
     
   For the API I connect to a MySQL database deploy in AWS and use ASP.NET framework with Entity Framework to create the API.
     
-     ## Look
+   ## Look
    
    ![Screenshot_20230127_093535](https://user-images.githubusercontent.com/64554427/215193295-dedfc220-e8a8-4b2d-a8fb-27c8b7632dbe.png)
 
