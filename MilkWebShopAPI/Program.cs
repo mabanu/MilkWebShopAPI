@@ -30,6 +30,9 @@ if (app.Environment.IsDevelopment())
 	builder.Configuration.AddUserSecrets<Program>();
 }
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.UseCors(cors => cors
 	.AllowAnyHeader()
 	.AllowAnyMethod()
